@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Filper</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        const colors=["red","green","bule","rgba(133,122,200)","#f15052"]
+        const btn=document.getElementById("btn");
+        const color=document.querySelector(".color");
+        btn.addEventListener("click",function(){
+            const randomnumber=getrandomNuber();
+            console.log(randomnumber)
+            document.body.style.backgroundColor=colors[randomnumber];
+            color.textContent=colors[randomnumber];
+        });
+        function getrandomNuber(){
+            return Math.random()=colors.length;
+        }</script>
+</head>
+<body>
+    <div class="container">
+        <h1>Background Color:<span class="color"></span></h1>
+        <button id="btn">Click Me</button> 
+    </div>
+</body>
+</html>
